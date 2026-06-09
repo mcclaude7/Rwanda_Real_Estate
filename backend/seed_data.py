@@ -1,3 +1,7 @@
+"""
+Seed script — run: python manage.py seed_data
+"""
+
 from django.core.management.base import BaseCommand
 from django.contrib.auth import get_user_model
 from accounts.models import UserProfile
@@ -57,8 +61,4 @@ class Command(BaseCommand):
         self.stdout.write('📝 admin / password123')
         self.stdout.write('📝 buyer_john / password123')
         self.stdout.write('📝 jp_mugabo / password123')
-EOF
 
-cd /home/user/rwanda-estate
-git add backend/seed_data.py
-git commit -m "feat(backend): add seed data script with 5 Rwanda properties, users, agents, amenities"
